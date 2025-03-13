@@ -4,7 +4,7 @@ FROM $NODE_BASE_IMAGE
 ARG GLIBC_VERSION
 ARG OSS_SERVERLESS_VERSION=latest
 
-RUN apk --no-cache add \
+RUN apk add --no-cache \
     aws-cli \
     bash \
     wget \
