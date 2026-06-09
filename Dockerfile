@@ -2,7 +2,7 @@ ARG NODE_BASE_IMAGE
 FROM $NODE_BASE_IMAGE
 
 ARG GLIBC_VERSION
-ARG OSS_SERVERLESS_VERSION=latest
+ARG OSLS_VERSION=latest
 
 RUN apk add --no-cache \
     aws-cli \
@@ -16,6 +16,6 @@ RUN wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/s
     apk add --force-overwrite glibc-$GLIBC_VERSION.apk && \
     rm -f glibc-$GLIBC_VERSION.apk
 
-RUN npm install -g osls@$OSS_SERVERLESS_VERSION && sls --version
+RUN npm install -g osls@$OSLS_VERSION && sls --version
 
 WORKDIR /opt/app

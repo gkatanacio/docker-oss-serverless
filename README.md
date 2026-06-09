@@ -1,6 +1,6 @@
 # docker-oss-serverless
 
-Docker image containing [oss-serverless](https://github.com/oss-serverless/serverless) (maintained version of [Serverless Framework](https://www.serverless.com/) CLI v3).
+Docker image containing [osls](https://github.com/oss-serverless/osls) (maintained version of [Serverless Framework](https://www.serverless.com/) CLI v3).
 
 As discussed in [this article](https://dev.to/aws-heroes/whats-next-with-the-serverless-framework-in-2025-121d), the official Serverless team has decided to drop support for Serverless Framework v3 and focus on v4, which has licensing changes that also affects the [CLI's authentication method](https://www.serverless.com/framework/docs/guides/upgrading-v4#authentication-via-access-or-license-keys). This gave birth to **oss-serverless**, an open-source fork of Serverless Framework v3, that is planned to be continuously maintained and enhanced.
 

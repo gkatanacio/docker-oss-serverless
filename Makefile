@@ -1,14 +1,14 @@
 NODE_BASE_IMAGE = node:lts-alpine
 GLIBC_VERSION = 2.34-r0
-OSS_SERVERLESS_VERSION = 3.62.1
-OUTPUT_IMAGE = gkatanacio/oss-serverless:$(OSS_SERVERLESS_VERSION)
+OSLS_VERSION = 3.74.0
+OUTPUT_IMAGE = gkatanacio/oss-serverless:$(OSLS_VERSION)
 
 .PHONY: build
 build:
 	docker build --no-cache \
 		--build-arg NODE_BASE_IMAGE=$(NODE_BASE_IMAGE) \
 		--build-arg GLIBC_VERSION=$(GLIBC_VERSION) \
-		--build-arg OSS_SERVERLESS_VERSION=$(OSS_SERVERLESS_VERSION) \
+		--build-arg OSLS_VERSION=$(OSLS_VERSION) \
 		-t $(OUTPUT_IMAGE) .
 
 .PHONY: push
