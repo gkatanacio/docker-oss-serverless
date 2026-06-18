@@ -1,6 +1,6 @@
 NODE_BASE_IMAGE = node:lts-alpine
 GLIBC_VERSION = 2.34-r0
-OSLS_VERSION = 3.74.0
+OSLS_VERSION = 3.76.0
 OUTPUT_IMAGE = gkatanacio/oss-serverless:$(OSLS_VERSION)
 
 .PHONY: build
